@@ -5,7 +5,7 @@ import withNuxt from "./.nuxt/eslint.config.mjs";
 export default withNuxt(
   ...a11y.configs["flat/recommended"],
   {
-    "name": "vuejs-accessibility:overrides",
+    "name": "vuejs-accessibility/overrides",
     "rules": Object.keys(a11y.rules).reduce((collection, rule) => {
       collection[`vuejs-accessibility/${rule}`] = "warn";
       return collection;
@@ -44,4 +44,18 @@ export default withNuxt(
       "yoda": ["error", "never", { "exceptRange": true }],
     },
   },
-);
+).override("nuxt/stylistic", {
+  rules: {
+    "@stylistic/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "comma",
+        "requireLast": true,
+      },
+      "singleline": {
+        "delimiter": "comma",
+        "requireLast": false,
+      },
+      "multilineDetection": "brackets",
+    }],
+  },
+});
