@@ -1,0 +1,47 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+
+  .w-dvw {
+    width: 100vw;
+    width: 100dvw;
+  }
+  .h-dvh {
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
+/* @layer primevue {
+  
+} */
+
+@layer base {
+
+  h1, h2, h3, h4, h5 {
+    @apply text-balance;
+  }
+
+  /* h1, h2 {
+    @apply text-xl;
+    @apply font-semibold;
+    @apply mb-6;
+  } */
+
+  a {
+    @apply text-primary-500;
+    @apply hover:text-primary-600;
+    @apply hover:underline;
+    @apply transition-colors;
+  }
+
+  small {
+    font-size: 90%;
+  }
+}

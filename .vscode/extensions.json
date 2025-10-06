@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "antfu.goto-alias",
+    "lokalise.i18n-ally",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "cpylua.language-postcss"
+  ]
+}

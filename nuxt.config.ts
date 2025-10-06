@@ -1,41 +1,34 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+import theme from './prime.config'
+
 export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
-    "@nuxt/eslint",
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxtjs/seo",
-    "@pinia/nuxt",
-    "@primevue/nuxt-module",
-    "@vueuse/nuxt",
-    "nuxt-typed-router",
+    '@nuxt/eslint',
+    '@nuxt/icon',
+    '@pinia/nuxt',
+    '@primevue/nuxt-module',
+    '@vueuse/nuxt',
   ],
-  css: [
-    "normalize.css/normalize.css",
-    "assets/css/variable.scss",
-    "assets/css/base.scss",
-  ],
-  components: [
-    {
-      path: "@/components",
-      pathPrefix: false,
-    },
-  ],
+  css: ['@/assets/css/main.css'],
+  imports: {
+    dirs: ['stores'],
+  },
   eslint: {
     config: {
-      stylistic: {
-        braceStyle: "1tbs",
-        quoteProps: "consistent",
-        quotes: "double",
-        semi: true,
-      },
+      standalone: false,
     },
   },
-  vite: {
-    esbuild: {
-      drop: ["debugger"],
-      pure: ["console.log", "console.debug"],
+  primevue: {
+    options: theme,
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      'postcss-nested': {},
     },
   },
-});
+})

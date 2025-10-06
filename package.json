@@ -1,50 +1,71 @@
 {
-  "name": "nuxt3-starter",
-  "private": true,
+  "name": "nuxt-starter",
   "type": "module",
+  "version": "4.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.18.0",
+  "description": "A starter template for my nuxt projects",
+  "author": "Oliver Mak <oliver139.working@gmail.com> (https://github.com/oliver139)",
+  "license": "MIT",
+  "homepage": "https://github.com/oliver139/nuxt-starter",
+  "repository": {
+    "type": "git",
+    "url": "github:oliver139/nuxt-starter"
+  },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "nuxt": "nuxt",
-    "module": "nuxt module",
-    "postmodule": "eslint ./nuxt.config.ts --fix",
-    "lint:check": "eslint . --cache",
-    "lint": "eslint . --cache --fix"
+    "dev": "nuxi dev",
+    "prepare": "simple-git-hooks",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "lint": "eslint --cache",
+    "lint:fix": "eslint --cache --fix",
+    "lint:inspect": "eslint --inspect-config",
+    "analyze": "nlx node-modules-inspector",
+    "release": "bumpp",
+    "ncu": "nlx npm-check-updates"
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.3.13",
-    "@nuxt/icon": "1.0.0-rc.1",
-    "@nuxt/image": "^1.7.0",
-    "@nuxtjs/seo": "2.0.0-rc.10",
-    "@opentelemetry/api": "1.8.0",
-    "@pinia/nuxt": "^0.5.1",
-    "normalize.css": "^8.0.1",
-    "nuxt": "^3.12.2",
-    "nuxt-typed-router": "^3.6.4",
-    "primevue": "4.0.0-rc.2",
-    "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "@pinia/nuxt": "^0.11.2",
+    "@primeuix/themes": "^1.2.5",
+    "@vueuse/nuxt": "13.9.0",
+    "nuxt": "^4.1.2",
+    "pinia": "^3.0.3",
+    "primevue": "^4.4.0",
+    "tailwindcss-primeui": "^0.6.1",
+    "vue": "^3.5.22",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "4.0.0-rc.2",
-    "@vueuse/core": "^10.11.0",
-    "@vueuse/nuxt": "^10.11.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "eslint-plugin-vuejs-accessibility": "^2.3.0",
-    "lint-staged": "^15.2.7",
-    "sass": "^1.77.6",
-    "simple-git-hooks": "^2.11.1"
+    "@antfu/ni": "^26.1.0",
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/icon": "2.0.0",
+    "@oliver139/eslint-config": "^3.2.1",
+    "@primevue/nuxt-module": "^4.4.0",
+    "@types/eslint-plugin-tailwindcss": "^3.17.0",
+    "autoprefixer": "^10.4.21",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.37.0",
+    "eslint-plugin-tailwindcss": "^3.18.2",
+    "lint-staged": "^16.2.3",
+    "postcss": "^8.5.6",
+    "postcss-nested": "^7.0.2",
+    "simple-git-hooks": "^2.13.1",
+    "tailwindcss": "^3.4.18"
   },
+
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{cjs,mjs,js,ts,tsx,vue}": [
-      "eslint --cache --fix"
-    ]
-  }
+    "*": "eslint --cache --fix"
+  },
+  "browserslist": [
+    ">0.3%",
+    "defaults",
+    "last 5 versions",
+    "last 10 Chrome versions",
+    "not dead"
+  ]
 }

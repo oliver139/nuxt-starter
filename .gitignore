@@ -4,22 +4,47 @@
 .nuxt
 .nitro
 .cache
-.eslintcache
 dist
+dist-ssr
 
 # Node dependencies
 node_modules
-
-# Logs
-logs
-*.log
-
-# Misc
-.DS_Store
-.fleet
-.idea
 
 # Local env files
 .env
 .env.*
 !.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Cypress 
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TS Build
+*.tsbuildinfo
+
+# Cache
+.eslintcache
+
+# Misc
+.DS_Store
+*.local

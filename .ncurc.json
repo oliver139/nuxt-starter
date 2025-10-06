@@ -1,0 +1,8 @@
+{
+  "format": "group",
+  "upgrade": true,
+  "interactive": true,
+  "reject": [
+    "tailwindcss"
+  ]
+}
