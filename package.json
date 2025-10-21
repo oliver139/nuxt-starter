@@ -50,7 +50,6 @@
     "eslint-plugin-tailwindcss": "^3.18.2",
     "lint-staged": "^16.2.3",
     "postcss": "^8.5.6",
-    "postcss-nested": "^7.0.2",
     "simple-git-hooks": "^2.13.1",
     "tailwindcss": "^3.4.18"
   },
