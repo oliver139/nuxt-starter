@@ -2,7 +2,7 @@
 import process from 'node:process'
 import tailwindcss from '@tailwindcss/vite'
 
-const siteName = process.env.SITE_NAME || 'nuxt-starter2'
+const siteName = process.env.SITE_NAME || 'nuxt-starter'
 const siteDescription = process.env.SITE_DESC
 const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
 const siteImage = process.env.SITE_IMG

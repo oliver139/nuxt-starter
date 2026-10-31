@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-starter2",
+  "name": "nuxt-starter",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@12.16.1",

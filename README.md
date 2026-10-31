@@ -1,4 +1,4 @@
-# nuxt-starter2
+# nuxt-starter
 
 A blank Nuxt 4 template derived from the development setup of `oliver-personal-site`, with independent Git history.
 
@@ -36,7 +36,7 @@ Copy `.env.example` to `.env` to customize the public site metadata:
 
 | Variable | Purpose | Default |
 | --- | --- | --- |
-| `SITE_NAME` | Document and social title | `nuxt-starter2` |
+| `SITE_NAME` | Document and social title | `nuxt-starter` |
 | `SITE_DESC` | Optional description | Empty |
 | `SITE_URL` | Site origin and localization base URL | `http://localhost:3000` |
 | `SITE_IMG` | Optional social image URL | Empty |

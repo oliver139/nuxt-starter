@@ -1,4 +1,4 @@
-# Agent guide for nuxt-starter2
+# Agent guide for nuxt-starter
 
 ## Project context
 
